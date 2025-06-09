@@ -8,3 +8,6 @@
 function filter_list(l) {
     return l.filter(x => typeof x === 'number')
   }
+
+// Need to make sure not to capitalize data type
+// Data types for typeof include string, number, boolean, bigint, symbol, null, and undefined
