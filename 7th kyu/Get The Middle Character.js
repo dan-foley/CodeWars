@@ -17,3 +17,10 @@ function getMiddle(s) {
       return arr[Math.ceil(arr.length / 2) - 1];
     }
   }
+
+//Simpler version using slice
+// function getMiddle(s) {
+//   return s.slice((s.length - 1) / 2, s.length / 2 + 1);
+// }
+
+//Slice implicitly converts non-integer numbers into integers by flooring them. Ex: 1.5 becomes 1, 2.7 becomes 2, etc.
