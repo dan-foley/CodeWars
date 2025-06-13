@@ -18,3 +18,8 @@ function isIsogram(str){
     }
     return true;
   }
+
+//Simpler version using Set
+//function isIsogram(str){
+//   return new Set(str.toLowerCase()).size === str.length;
+// }
