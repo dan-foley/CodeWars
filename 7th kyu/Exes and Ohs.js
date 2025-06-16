@@ -13,3 +13,8 @@ function XO(str) {
     let strO = str.toLowerCase().split('').filter(letter => letter === 'o');
     return strX.length === strO.length;
 }
+
+// Simpler solution
+// function XO(str) {
+//     return str.toLowerCase().split('x').length === str.toLowerCase().split('o').length;
+// }
