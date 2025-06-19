@@ -21,3 +21,24 @@ const pairs = {
 function dnaStrand(dna){
   return dna.replace(/./g, char => pairs[char])
 }
+
+// Uses a regular expression to match every single character (.) in the string.
+// The g flag makes it global, so it replaces every character in the string.
+// For each character char (like 'A', 'T', 'C', or 'G'), it looks up its complement in the pairs object and replaces it.
+
+// Old solution:
+// function dnaStrand(dna){
+//   let str = [];
+//   for (let i = 0; i <= dna.length; i++){
+//     if (dna[i] === 'A'){
+//       str.push('T')
+//     }else if (dna[i] === 'T'){
+//       str.push('A')
+//     }else if (dna[i] === 'C'){
+//       str.push('G')
+//     }else if (dna[i] === 'G'){
+//       str.push('C')
+//     }
+//   }
+//   return str.join('');
+// }
