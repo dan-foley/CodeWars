@@ -14,3 +14,6 @@
 function getSum(a, b){
    return (Math.abs(b - a) + 1) * (a + b) / 2;
 }
+
+// This code sets up the formula Sum = n(first term + last term) / 2
+// The formula calculates the sum of all integers between two numbers (inclusive) by multiplying the number of terms ((b - a) + 1) by the average of the two numbers (a + b) / 2.
