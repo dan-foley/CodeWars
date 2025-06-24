@@ -9,3 +9,6 @@
 // longest(a, a) -> "abcdefghijklmnopqrstuvwxyz"
 
 const longest = (s1, s2) => Array.from(new Set(s1 + s2)).sort().join('');
+
+// Alt solution
+// const longest = (s1,s2) => [...new Set(s1+s2)].sort().join('');
