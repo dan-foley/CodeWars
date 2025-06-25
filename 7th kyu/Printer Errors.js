@@ -20,3 +20,6 @@ function printerError(s) {
     const errorCount = errors ? errors.length : 0
     return `${errorCount}/${s.length}`
 }
+
+// Single line solution
+// const printerError = s => `${(s.match(/[n-z]/g) || []).length}/${s.length}`;
