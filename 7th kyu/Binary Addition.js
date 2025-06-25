@@ -13,3 +13,6 @@ function addBinary(a,b) {
 }
 
 // To convert a decimal number to its binary representation in JavaScript, the toString() method can be used with a radix of 2.
+
+//Single line solution:
+// const addBinary = (a,b) => (a+b).toString(2);
