@@ -26,12 +26,22 @@
 
 // There are no fractions of people. At the end of each year, the population count is an integer: 252.8 people round down to 252 persons.
 
+// function nbYear(p0, percent, aug, p) {
+//   let n = 0;
+//   let popGrowth = (p0 + p0 * (percent / 100) + aug);
+//   while(p0 < p){
+//     p0 = Math.floor(p0 + p0 * (percent / 100) + aug);
+//     n++;
+//   }
+//   return n;
+// }
+
+// Simpler solution
+
 function nbYear(p0, percent, aug, p) {
-  let n = 0;
-  let popGrowth = (p0 + p0 * (percent / 100) + aug);
-  while(p0 < p){
-    p0 = Math.floor(p0 + p0 * (percent / 100) + aug);
-    n++;
-  }
-  return n;
+    let years;
+    for (years = 0; p0 < p; years++){
+      p0 = Math.floor(p0 + p0 * percent / 100 + aug);
+    }
+  return years;
 }
