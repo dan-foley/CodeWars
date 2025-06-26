@@ -13,10 +13,15 @@
 // 0,2,3 -> false
 // 1,2,9 -> false 
 
+// function isTriangle(a,b,c){
+//   if (a + b > c && b + c > a && c + a > b){
+//     return true
+//   }else{
+//     return false
+//   }
+// }
+
+// Simpler solution:
 function isTriangle(a,b,c){
-  if (a + b > c && b + c > a && c + a > b){
-    return true
-  }else{
-    return false
-  }
+   return a + b > c && b + c > a && c + a > b ;
 }
