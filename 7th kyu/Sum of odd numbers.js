@@ -14,3 +14,6 @@
 function rowSumOddNumbers(n) {
 	return n ** 3;
 }
+
+// Single line solution
+// const rowSumOddNumbers = n => Math.pow(n,3);
