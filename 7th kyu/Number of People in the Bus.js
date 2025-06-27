@@ -10,13 +10,15 @@
 
 // The second value in the first pair in the array is 0, since the bus is empty in the first bus stop.
 
-var number = function(busStops){
-  let on = 0;
-  let off = 0;
-  for (let i = 0; i < busStops.length; i++){
-    on += busStops[i][0];
-    off += busStops[i][1];
-  }
-  let total = on - off;
-  return total;
-}
+// var number = function(busStops){
+//   let on = 0;
+//   let off = 0;
+//   for (let i = 0; i < busStops.length; i++){
+//     on += busStops[i][0];
+//     off += busStops[i][1];
+//   }
+//   let total = on - off;
+//   return total;
+// }
+
+const number = busStops => busStops.reduce((total, [on, off]) => total += on - off, 0);
