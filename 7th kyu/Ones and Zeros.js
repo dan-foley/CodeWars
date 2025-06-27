@@ -17,3 +17,6 @@
 const binaryArrayToNumber = arr => {
    return parseInt(arr.join(''),2);
 };
+
+// Single line solution
+// const binaryArrayToNumber = arr => parseInt(arr.join(''), 2);
