@@ -16,11 +16,16 @@
 // Output: "even"
 // Have fun!
 
+// function oddOrEven(array) {
+//   let total = array.reduce((sum, num) => sum += num, 0);
+//   if (total % 2 === 0){
+//     return "even"
+//   }else{
+//     return "odd"
+//   }
+// }
+
+// Simpler solution using reduce
 function oddOrEven(array) {
-  let total = array.reduce((sum, num) => sum += num, 0);
-  if (total % 2 === 0){
-    return "even"
-  }else{
-    return "odd"
-  }
+   return array.reduce((sum,num) => sum += num, 0) % 2 === 0 ? "even" : "odd";
 }
