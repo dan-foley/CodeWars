@@ -7,3 +7,6 @@
 function reverseWords(str) {
   return str.split(' ').map(word => word.split('').reverse().join('')).join(' ');
 }
+
+// Single line solution
+// const reverseWords = str => str.split(' ').map(word => word.split('').reverse().join('')).join(' ');
