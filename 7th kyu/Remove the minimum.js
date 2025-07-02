@@ -12,7 +12,10 @@
 // * Input: [5,3,2,1,4], output = [5,3,2,4]
 // * Input: [2,2,1,2,1], output = [2,2,2,1]
 
-function removeSmallest(numbers) {
-  const index = numbers.indexOf(Math.min(...numbers));
-  return [...numbers.slice(0, index), ...numbers.slice(index + 1)]
-}
+// function removeSmallest(numbers) {
+//   const index = numbers.indexOf(Math.min(...numbers));
+//   return [...numbers.slice(0, index), ...numbers.slice(index + 1)]
+// }
+
+// Simpler, single line solution
+const removeSmallest = numbers => numbers.filter((n,i) => i !== numbers.indexOf(Math.min(...numbers)));
