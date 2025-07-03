@@ -11,8 +11,12 @@
 // Remarks
 // All arrays or lists will always have at least one element, so you don't need to check the length. Also, your function will always get an array or a list, you don't have to check for null, undefined or similar.
 
-function minMax(arr){
-  let min = Math.min(...arr);
-  let max = Math.max(...arr);
-  return [min, max];
-}
+// function minMax(arr){
+//   let min = Math.min(...arr);
+//   let max = Math.max(...arr);
+//   return [min, max];
+// }
+
+//Simpler one line solutiob
+
+const minMax = arr => [Math.min(...arr), Math.max(...arr)];
