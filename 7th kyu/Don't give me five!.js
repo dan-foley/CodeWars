@@ -18,6 +18,7 @@ function dontGiveMeFive(start, end){
   let arr = []
   for (let i = start; i <= end; i++){
     if (!i.toString().includes('5')){
+//  if (!/5/.test(i)) --- this also works
       arr.push(i);
     }
   }
