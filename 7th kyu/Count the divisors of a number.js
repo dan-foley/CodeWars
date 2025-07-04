@@ -20,3 +20,14 @@ function getDivisorsCnt(n){
 }
 
 // Beyond the square root of n, all divisors are already found as complements of earlier ones
+
+// Example using Math.sqrt()
+// function getDivisorsCnt(n){
+//   let count = 0;
+//   for (let i = 1; i <= Math.sqrt(n); i++){
+//     if (n % i === 0){
+//       count += i === Math.sqrt(n) ? 1 : 2;
+//     }
+//   }
+//   return count;
+// }
