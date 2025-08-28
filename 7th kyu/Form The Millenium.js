@@ -9,4 +9,8 @@
 function minValue(values){
   let sorted = [...new Set(values.sort((a,b)=>a-b))]
   return Number(sorted.join(''));
+
 }
+
+// Shorter answer
+// const minValue = values => Number(Array.from(new Set(values)).sort((a,b)=>a-b).join(''));
