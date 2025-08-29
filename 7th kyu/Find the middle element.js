@@ -17,3 +17,8 @@ function gimme (triplet) {
   let midSorted = sorted[1];
   return triplet.indexOf(midSorted);
 }
+
+//Shorter Version
+// function gimme (triplet) {
+//   return triplet.indexOf([...triplet].sort((a,b)=>a-b)[1])
+// }
