@@ -25,3 +25,6 @@ function inAscOrder(arr) {
 // The sort() method doesn’t work directly for this problem because it mutates the original array in place, destroying the original order you need to compare against.
 // Even if you make a copy first, using === to compare arrays only checks if they are the same object in memory, not if their contents are the same.
 // To correctly check order, you must sort a copy of the array and then compare the two arrays element-by-element.
+
+// Shorter answer
+// const inAscOrder = arr => arr.join('') === [...arr].sort((a,b)=>a-b).join('');
