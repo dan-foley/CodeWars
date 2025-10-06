@@ -8,25 +8,35 @@
 // Notes
 // Assertion messages may be unclear about what they display in some languages. If you read "...It Should encode XXX", the "XXX" is the expected result, not the input!
 
+// function duplicateEncode(word){
+//   let nuWord = word.toLowerCase();
+//   let counts = {};
+//   let nuStr = '';
+  
+//   for (let char of nuWord){
+//     if (counts[char]){
+//       counts[char] += 1;
+//     }else{
+//       counts[char] = 1
+//     }
+//   }
+  
+//   for (let char of nuWord){
+//     if (counts[char] > 1){
+//       nuStr += ')';
+//     }else{
+//       nuStr += '(';
+//     }
+//   } 
+//   return nuStr;
+
+// }
+
+//Simpler solution using string methods
+
 function duplicateEncode(word){
-  let nuWord = word.toLowerCase();
-  let counts = {};
-  let nuStr = '';
-  
-  for (let char of nuWord){
-    if (counts[char]){
-      counts[char] += 1;
-    }else{
-      counts[char] = 1
-    }
-  }
-  
-  for (let char of nuWord){
-    if (counts[char] > 1){
-      nuStr += ')';
-    }else{
-      nuStr += '(';
-    }
-  } 
-  return nuStr;
-}
+  return word.toLowerCase()
+             .split('')
+             .map((char, i, arr) => arr.indexOf(char) === arr.lastIndexOf(char) ? '(' : ')')
+             .join('');
+};
