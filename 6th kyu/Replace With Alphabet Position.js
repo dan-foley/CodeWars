@@ -10,10 +10,19 @@
 // Input = "The sunset sets at twelve o' clock."
 // Output = "20 8 5 19 21 14 19 5 20 19 5 20 19 1 20 20 23 5 12 22 5 15 3 12 15 3 11"
 
+// function alphabetPosition(text) {
+//   return text.toLowerCase()
+//              .split('')
+//              .filter(char => /[a-z]/.test(char))
+//              .map(char => char.charCodeAt(0) - 97 + 1)
+//              .join(' ');
+
+// };
+
 function alphabetPosition(text) {
   return text.toLowerCase()
+             .replace(/[^a-z]/g, '')
              .split('')
-             .filter(char => /[a-z]/.test(char))
-             .map(char => char.charCodeAt(0) - 97 + 1)
+             .map(char => char.charCodeAt(0) - 96)
              .join(' ');
-};
+}
