@@ -5,7 +5,10 @@
 // * 'abc' =>  ['ab', 'c_']
 // * 'abcdef' => ['ab', 'cd', 'ef']
 
-function solution(str){
-  if (str.length % 2 !== 0) str += '_';
-  return str.match(/.{2}/g) || [];
-}
+// function solution(str){
+//   if (str.length % 2 !== 0) str += '_';
+//   return str.match(/.{2}/g) || [];
+
+// }
+
+const solution = str => (str + '_').match(/.{2}/g) || [];
