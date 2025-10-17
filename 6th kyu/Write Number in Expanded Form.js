@@ -6,15 +6,25 @@
 // 70304 --> "70000 + 300 + 4"
 // NOTE: All numbers will be whole numbers greater than 0.
 
-function expandedForm(num) {
-  const str = num.toString();
-  const parts = [];
+// function expandedForm(num) {
+//   const str = num.toString();
+//   const parts = [];
   
-  for (let i = 0; i < str.length; i++){
-    let digit = str[i];
-    if (digit !== '0'){
-      parts.push(digit + '0'.repeat(str.length - i - 1));
-    }
-  }
-  return parts.join(' + ');
-}
+//   for (let i = 0; i < str.length; i++){
+//     let digit = str[i];
+//     if (digit !== '0'){
+//       parts.push(digit + '0'.repeat(str.length - i - 1));
+//     }
+//   }
+//   return parts.join(' + ');
+// }
+
+function expandedForm(num) {
+  return num.toString()
+            .split('')
+            .reverse()
+            .map((n, i) => n * Math.pow(10, i))
+            .filter(n => n > 0)
+            .reverse()
+            .join(' + ')
+};
