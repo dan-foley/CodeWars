@@ -6,17 +6,18 @@
 // "This is a test        --> "This is a test" 
 // "This is another test" --> "This is rehtona test"
 
-function spinWords(string){
-  let arr = string.split(' ');
-  for (let i = 0; i < arr.length; i++){
-    if (arr[i].length >= 5){
-      arr[i] = arr[i].split('').reverse().join('')
-    }
-  }
-  return arr.join(' ');
-}
+// function spinWords(string){
+//   let arr = string.split(' ');
+//   for (let i = 0; i < arr.length; i++){
+//     if (arr[i].length >= 5){
+//       arr[i] = arr[i].split('').reverse().join('')
+//     }
+//   }
+//   return arr.join(' ');
+// }
 
-//This also works
 function spinWords(string){
-  return string.split(' ').map(word => word.length > 4 ? word.split('').reverse().join('') : word).join(' ');
+  return string.split(' ')
+               .map(word => word.length > 4 ? word.split('').reverse().join('') : word)
+               .join(' ');
 }
