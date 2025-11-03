@@ -5,13 +5,16 @@
 
 // If a = [1, 2, 2, 2, 3] and b = [2], the result should be [1, 3].
 
-function arrayDiff(a, b) {
-  let diff = [];
-  let setB = new Set(b);
-  for (let num of a){
-    if (!setB.has(num)){
-      diff.push(num);
-    }
-  }
-  return diff;
-}
+// function arrayDiff(a, b) {
+//   let diff = [];
+//   let setB = new Set(b);
+//   for (let num of a){
+//     if (!setB.has(num)){
+//       diff.push(num);
+//     }
+//   }
+//   return diff;
+
+// }
+
+const arrayDiff = (a, b) => a.filter(num => !b.includes(num));
