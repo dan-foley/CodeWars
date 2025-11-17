@@ -17,4 +17,8 @@ function wave(str){
     };
   };
   return result;
+
 };
+
+// One-line solution
+// const wave = str => [...str].map((c,i)=> c === ' ' ? null : str.slice(0,i) + c.toUpperCase() + str.slice(i + 1)).filter(Boolean);
