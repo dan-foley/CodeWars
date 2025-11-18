@@ -19,7 +19,10 @@
 // In Shell bash a1 and a2 are strings. The return is a string where words are separated by commas.
 // Beware: In some languages r must be without duplicates.
 
-function inArray(array1,array2){
-  let result = array1.filter(str1 => array2.some(str2 => str2.includes(str1))).sort();
-  return result;
-}
+// function inArray(array1,array2){
+//   let result = array1.filter(str1 => array2.some(str2 => str2.includes(str1))).sort();
+//   return result;
+
+// }
+
+const inArray = (arr1, arr2) => arr1.filter(s1 => arr2.some(s2 => s2.includes(s1))).sort();
