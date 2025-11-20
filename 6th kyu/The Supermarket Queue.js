@@ -30,14 +30,26 @@
 
 // P.S. The situation in this kata can be likened to the more-computer-science-related idea of a thread pool, with relation to running multiple processes at the same time: https://en.wikipedia.org/wiki/Thread_pool
 
+// function queueTime(customers, n) {
+//   const tills = new Array(n).fill(0);
+  
+//   for (let time of customers){
+//     const minTime = Math.min(...tills);
+//     const minIndex = tills.indexOf(minTime);
+//     tills[minIndex] += time;
+//   }
+
 function queueTime(customers, n) {
   const tills = new Array(n).fill(0);
   
-  for (let time of customers){
-    const minTime = Math.min(...tills);
-    const minIndex = tills.indexOf(minTime);
-    tills[minIndex] += time;
-  }
+  for (const t of customers){
+    tills.sort((a,b)=>a-b);
+    tills[0] += t;
+  };
   
   return Math.max(...tills);
+};
+  
+  return Math.max(...tills);
+
 }
