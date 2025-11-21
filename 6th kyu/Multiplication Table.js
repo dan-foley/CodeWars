@@ -9,14 +9,20 @@
 
 // [[1,2,3],[2,4,6],[3,6,9]]
 
-function multiplicationTable(size) {
-  const table = [];
-  for (let i = 1; i <= size; i++){
-    const rows = [];
-    for (let j = 1; j <= size; j++){
-      rows.push(i * j)
-    }
-    table.push(rows);
-  }
-  return table;
-};
+// function multiplicationTable(size) {
+//   const table = [];
+//   for (let i = 1; i <= size; i++){
+//     const rows = [];
+//     for (let j = 1; j <= size; j++){
+//       rows.push(i * j)
+//     }
+//     table.push(rows);
+//   }
+//   return table;
+
+// };
+
+const multiplicationTable = size => 
+    Array(size).fill()
+        .map((a, i) => Array(size).fill()
+            .map((e, j) => (1 + i) * (1 + j)));
