@@ -15,9 +15,10 @@
 
 const encryptThis = text => {
   return text.split(' ').map(word => {
-    if (word.length === 0) return '';
+    // if (word.length === 0) return ''; - Don't need this line
     if (word.length === 1) return word.charCodeAt(0);
     if (word.length === 2) return word.charCodeAt(0) + word[1];
     return word.charCodeAt(0) + word[word.length-1] + word.slice(2,-1) + word[1];
   }).join(' ');
+
 };
