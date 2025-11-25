@@ -14,11 +14,19 @@
 
 // [1,1,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,0,1,0,1,0,1,0]
 
+// function dataReverse(data) {
+//   let bytes = [];
+//   for (let i = 0; i < data.length; i += 8){
+//     bytes.push(data.slice(i, i + 8));
+//   };
+//   bytes.reverse();
+//   return bytes.flat();
+// };
+
 function dataReverse(data) {
   let bytes = [];
   for (let i = 0; i < data.length; i += 8){
-    bytes.push(data.slice(i, i + 8));
+    bytes.unshift(...data.slice(i, i + 8));
   };
-  bytes.reverse();
-  return bytes.flat();
+  return bytes;
 };
