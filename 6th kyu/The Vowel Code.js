@@ -13,12 +13,20 @@
 
 // For the sake of simplicity, you can assume that any numbers passed into the function will correspond to vowels.
 
+// function encode(string) {
+//   const map = {a: '1', e: '2', i: '3', o: '4', u: '5' }
+//   return string.replace(/[aeiou]/g, c => map[c])
+// }
+
+// function decode(string) {
+//   const map = {1: 'a', 2: 'e', 3: 'i', 4: 'o', 5: 'u'}
+//   return string.replace(/[12345]/g, c => map[c])
+// }
+
 function encode(string) {
-  const map = {a: '1', e: '2', i: '3', o: '4', u: '5' }
-  return string.replace(/[aeiou]/g, c => map[c])
-}
+  return string.replace(/[aeiou]/g, x => '_aeiou'.indexOf(x));
+};
 
 function decode(string) {
-  const map = {1: 'a', 2: 'e', 3: 'i', 4: 'o', 5: 'u'}
-  return string.replace(/[12345]/g, c => map[c])
-}
+  return string.replace(/[12345]/g, x => '_aeiou'.charAt(x));
+};
