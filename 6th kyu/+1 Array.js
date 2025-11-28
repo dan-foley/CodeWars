@@ -15,3 +15,20 @@
 // [1, -9] is invalid because -9 is not a non-negative integer
 // [1, 2, 33] is invalid because 33 is not a single-digit integer
 
+function upArray(arr){
+  if (arr.length === 0 || arr.some(n => n < 0 || n > 9)){
+    return null;
+  }
+  
+  let carry = 1;
+  
+  for (let i = arr.length - 1; i >= 0; i--){
+    const sum = arr[i] + carry;
+    arr[i] = sum % 10;
+    carry = sum > 9 ? 1 : 0;
+  }
+  
+  if (carry) arr.unshift(1);
+  
+  return arr;
+}
