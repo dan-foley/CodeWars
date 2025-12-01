@@ -32,6 +32,12 @@
 
 // };
 
-function highestRank(arr){
-  return arr.sort((a, b) => arr.filter(num => num === b).length - arr.filter(num => num === a).length || b - a)[0];
-}
+// function highestRank(arr){
+//   return arr.sort((a, b) => arr.filter(num => num === b).length - arr.filter(num => num === a).length || b - a)[0];
+// }
+
+const highestRank = arr => 
+  arr.sort((a, b) => 
+    arr.filter(n => b === n).length - 
+      arr.filter(n => a === n).length 
+        || b - a)[0];
