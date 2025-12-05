@@ -9,11 +9,11 @@
 // [] --> []
 // ["a", "b", "c"] --> ["1: a", "2: b", "3: c"]
 
-var number=function(array){
-  if (array.length === 0){
-    return [];
-  }
-  return array.map((e, i) => `${i + 1}: ${e}`);
-}
+// var number=function(array){
+//   if (array.length === 0){
+//     return [];
+//   }
+//   return array.map((e, i) => `${i + 1}: ${e}`);
+// }
 
-//const number = array => array.length === 0 ? [] : array.map((e,i) => `${i + 1}: ${e}`)
+const number = array => array.map((e,i)=> `${i+1}: ${e}`);
