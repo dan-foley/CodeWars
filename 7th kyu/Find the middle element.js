@@ -12,13 +12,10 @@
 // gimme([5, 10, 14]) => 1
 // 10 is the number that fits between 5 and 14 and the index of 10 in the input array is 1.
 
-function gimme (triplet) {
-  let sorted = [...triplet].sort((a,b) => a-b);
-  let midSorted = sorted[1];
-  return triplet.indexOf(midSorted);
-}
-
-//Shorter Version
 // function gimme (triplet) {
-//   return triplet.indexOf([...triplet].sort((a,b)=>a-b)[1])
+//   let sorted = [...triplet].sort((a,b) => a-b);
+//   let midSorted = sorted[1];
+//   return triplet.indexOf(midSorted);
 // }
+
+const gimme = triplet => triplet.indexOf([...triplet].sort((a,b)=>a-b)[1]);
