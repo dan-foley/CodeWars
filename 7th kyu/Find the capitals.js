@@ -4,12 +4,14 @@
 // Example (Input --> Output)
 // "CodEWaRs" --> [0,3,4,6]
 
-var capitals = function (word) {
-	let caps = [];
-    for (let i = 0; i < word.length; i++){
-        if (word[i] === word[i].toUpperCase()){
-            caps.push(i)
-        }
-    }
-  return caps;
-};
+// var capitals = function (word) {
+// 	let caps = [];
+//     for (let i = 0; i < word.length; i++){
+//         if (word[i] === word[i].toUpperCase()){
+//             caps.push(i)
+//         }
+//     }
+//   return caps;
+// };
+
+const capitals = word => [...word].map((e, i) => e === e.toUpperCase() ? i : -1).filter(e => e >= 0);
