@@ -2,6 +2,8 @@
 
 // You can assume all values in the array are numbers.
 
-function smallEnough(a, limit){
-  return a.every(num => num <= limit);
-}
+// function smallEnough(a, limit){
+//   return a.every(num => num <= limit);
+// }
+
+const smallEnough = (a, limit) => a.every(num => num <= limit);
