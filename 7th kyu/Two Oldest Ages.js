@@ -8,6 +8,8 @@
 // [1, 5, 87, 45, 8, 8] --> [45, 87]
 // [1, 3, 10, 0]) --> [3, 10]
 
-function twoOldestAges(ages){
-  return ages.sort((a,b)=>a-b).slice(-2);
-}
+// function twoOldestAges(ages){
+//   return ages.sort((a,b)=>a-b).slice(-2);
+// }
+
+const twoOldestAges = ages => ages.sort((a,b)=>a-b).slice(-2);
