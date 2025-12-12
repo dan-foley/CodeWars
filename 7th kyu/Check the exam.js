@@ -13,16 +13,18 @@
 //  ["a", "a", "b", "c"]   ["a", "a", "b", "c"]  →     16
 //  ["b", "c", "b", "a"]   ["" , "a", "a", "c"]  →     0
 
-function checkExam(array1, array2) {
-  let score = 0;
-  for (let i = 0; i < array1.length; i++){
-    if (array2[i] === ''){
-      score += 0
-    }else if (array1[i] === array2[i]){
-      score += 4
-    }else{
-      score -= 1
-    }
-  }
-  return Math.max(score, 0)
-}
+// function checkExam(array1, array2) {
+//   let score = 0;
+//   for (let i = 0; i < array1.length; i++){
+//     if (array2[i] === ''){
+//       score += 0
+//     }else if (array1[i] === array2[i]){
+//       score += 4
+//     }else{
+//       score -= 1
+//     }
+//   }
+//   return Math.max(score, 0)
+// }
+
+const checkExam = (x, y) => Math.max(0, y.reduce((s, e, i) => s += (e === x[i] ? 4 : e === '' ? 0 : -1), 0));
