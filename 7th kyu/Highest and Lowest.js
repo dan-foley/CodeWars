@@ -10,7 +10,9 @@
 // There will always be at least one number in the input string.
 // Output string must be two numbers separated by a single space, and highest number is first.
 
-function highAndLow(numbers){
-    let arr = numbers.split(' ');
-    return `${Math.max(...arr)} ${Math.min(...arr)}`
-  }
+// function highAndLow(numbers){
+//     let arr = numbers.split(' ');
+//     return `${Math.max(...arr)} ${Math.min(...arr)}`
+//   }
+
+const highAndLow = n => `${Math.max(...n.split(' '))} ${Math.min(...n.split(' '))}`;
