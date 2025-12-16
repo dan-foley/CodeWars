@@ -8,19 +8,14 @@
 // "middle" --> "dd"
 // "A" --> "A"
 
-function getMiddle(s) {
-    let arr = s.split('');
-    let half = s.length / 2;
-    if (s.length % 2 === 0){
-      return arr[half - 1] + arr[half];
-    }else{
-      return arr[Math.ceil(arr.length / 2) - 1];
-    }
-  }
-
-//Simpler version using slice
 // function getMiddle(s) {
-//   return s.slice((s.length - 1) / 2, s.length / 2 + 1);
-// }
+//     let arr = s.split('');
+//     let half = s.length / 2;
+//     if (s.length % 2 === 0){
+//       return arr[half - 1] + arr[half];
+//     }else{
+//       return arr[Math.ceil(arr.length / 2) - 1];
+//     }
+//   }
 
-//Slice implicitly converts non-integer numbers into integers by flooring them. Ex: 1.5 becomes 1, 2.7 becomes 2, etc.
+const getMiddle = s => s.slice((s.length-1)/2, (s.length/2)+1);
