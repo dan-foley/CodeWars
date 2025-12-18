@@ -6,20 +6,18 @@
 // "aba" --> false
 // "moOse" --> false (ignore letter case)
 
-function isIsogram(str){
-    str = str.toLowerCase();
-    let arr = [];
-    for (let i = 0; i < str.length; i++){
-      if (arr.includes(str[i])){
-        return false
-      }else{
-        arr.push(str[i])
-      }
-    }
-    return true;
-  }
+// function isIsogram(str){
+//     str = str.toLowerCase();
+//     let arr = [];
+//     for (let i = 0; i < str.length; i++){
+//       if (arr.includes(str[i])){
+//         return false
+//       }else{
+//         arr.push(str[i])
+//       }
+//     }
+//     return true;
+//   }
 
-//Simpler version using Set
-//function isIsogram(str){
-//   return new Set(str.toLowerCase()).size === str.length;
-// }
+
+const isIsogram = str => new Set(str.toLowerCase()).size === str.length;
