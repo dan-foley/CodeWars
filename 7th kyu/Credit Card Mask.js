@@ -12,8 +12,8 @@
 // "Skippy" --> "##ippy"
 // "Nananananananananananananananana Batman!" --> "####################################man!"
 
-function maskify(cc) {
-  return cc.slice(0, -4).replace(/./g, '#') + cc.slice(-4);
-}
+// function maskify(cc) {
+//   return cc.slice(0, -4).replace(/./g, '#') + cc.slice(-4);
+// }
 
-// .replace(/./g, '#') replaces every character (the dot means every character and the g means global, so every match is replaced, not just the first) with a '#'.
+const maskify = cc => cc.slice(0, -4).replace(/./g, '#') + cc.slice(-4);
