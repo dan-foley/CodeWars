@@ -10,6 +10,8 @@
 
 // 'alpha beta gamma delta'
 
-function removeDuplicateWords (s) {
-  return Array.from(new Set(s.split(' '))).join(' ');
-}
+// function removeDuplicateWords (s) {
+//   return Array.from(new Set(s.split(' '))).join(' ');
+// }
+
+const removeDuplicateWords = s => Array.from(new Set(s.split(' '))).join(' ');
