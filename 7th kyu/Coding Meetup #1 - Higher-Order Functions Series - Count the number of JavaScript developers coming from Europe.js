@@ -19,6 +19,8 @@
 // The format of the strings will always be Europe and JavaScript.
 // All data will always be valid and uniform as in the example above.
 
-function countDevelopers(list) {
-  return list.filter(person => person.continent === 'Europe' && person.language === 'JavaScript').length;
-}
+// function countDevelopers(list) {
+//   return list.filter(person => person.continent === 'Europe' && person.language === 'JavaScript').length;
+// }
+
+const countDevelopers = list => list.filter(dev => dev.continent == 'Europe' && dev.language == 'JavaScript').length;
