@@ -2,7 +2,9 @@
 
 // Unfortunately for you, your drive is very bumpy! Given a string showing either flat road (_) or bumps (n). If you are able to reach home safely by encountering 15 bumps or less, return Woohoo!, otherwise return "Car Dead"
 
-function bump(x){
-  let bumps = x.split('').filter(char => char === 'n').length;
-  return bumps > 15 ? 'Car Dead' : 'Woohoo!'
-}
+// function bump(x){
+//   let bumps = x.split('').filter(char => char === 'n').length;
+//   return bumps > 15 ? 'Car Dead' : 'Woohoo!'
+// }
+
+const bump = x => x.split('').filter(c => c === 'n').length <= 15 ? 'Woohoo!' : 'Car Dead';
