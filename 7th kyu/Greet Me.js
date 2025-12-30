@@ -5,8 +5,10 @@
 // "riley" --> "Hello Riley!"
 // "JACK"  --> "Hello Jack!"
 
-const greet = name => {
-  let firstChar = name.slice(0,1).toUpperCase();
-  let restOfString = name.slice(1).toLowerCase();
-  return `Hello ${firstChar}${restOfString}!`
-};
+// const greet = name => {
+//   let firstChar = name.slice(0,1).toUpperCase();
+//   let restOfString = name.slice(1).toLowerCase();
+//   return `Hello ${firstChar}${restOfString}!`
+// };
+
+const greet = name => `Hello ${name[0].toUpperCase() + name.slice(1).toLowerCase()}!`;
