@@ -16,8 +16,10 @@
 //   return arr.join(' ');
 // }
 
-function spinWords(string){
-  return string.split(' ')
-               .map(word => word.length > 4 ? word.split('').reverse().join('') : word)
-               .join(' ');
-}
+// function spinWords(string){
+//   return string.split(' ')
+//                .map(word => word.length > 4 ? word.split('').reverse().join('') : word)
+//                .join(' ');
+// }
+
+const spinWords = str => str.split(' ').map(word => word.length >= 5 ? word.split('').reverse().join('') : word).join(' ');
