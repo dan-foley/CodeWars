@@ -10,17 +10,21 @@
 // "aA11" -> 2 # 'a' and '1'
 // "ABBA" -> 2 # 'A' and 'B' each occur twice
 
+// function duplicateCount(text){
+//   let chars = text.toLowerCase().split('');
+//   let totals = {};
+  
+//   chars.forEach(char => {
+//     if (totals[char]){
+//       totals[char] += 1;
+//     }else{
+//       totals[char] = 1;
+//     }
+//   })
+  
+//   return Object.values(totals).filter(val => val > 1).length;
+// }
+
 function duplicateCount(text){
-  let chars = text.toLowerCase().split('');
-  let totals = {};
-  
-  chars.forEach(char => {
-    if (totals[char]){
-      totals[char] += 1;
-    }else{
-      totals[char] = 1;
-    }
-  })
-  
-  return Object.values(totals).filter(val => val > 1).length;
+  return new Set(text.toLowerCase().split('').filter((c, _, arr) => arr.indexOf(c) !== arr.lastIndexOf(c))).size;
 }
