@@ -35,8 +35,6 @@
 //Simpler solution using string methods
 
 function duplicateEncode(word){
-  return word.toLowerCase()
-             .split('')
-             .map((char, i, arr) => arr.indexOf(char) === arr.lastIndexOf(char) ? '(' : ')')
-             .join('');
-};
+  return word.toLowerCase().split('').map((c, _, arr) => arr.indexOf(c) === arr.lastIndexOf(c) ? '(' : ')').join('');
+}
+
