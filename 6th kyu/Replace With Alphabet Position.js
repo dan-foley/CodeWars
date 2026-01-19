@@ -19,10 +19,14 @@
 
 // };
 
+// function alphabetPosition(text) {
+//   return text.toLowerCase()
+//              .replace(/[^a-z]/g, '')
+//              .split('')
+//              .map(char => char.charCodeAt(0) - 96)
+//              .join(' ');
+// }
+
 function alphabetPosition(text) {
-  return text.toLowerCase()
-             .replace(/[^a-z]/g, '')
-             .split('')
-             .map(char => char.charCodeAt(0) - 96)
-             .join(' ');
+  return text.toLowerCase().split('').filter(char => /[a-z]/.test(char)).map(char => char.charCodeAt(0) - 96).join(' ');
 }
