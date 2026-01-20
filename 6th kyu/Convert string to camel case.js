@@ -7,4 +7,10 @@
 
 // "The_Stealth-Warrior" gets converted to "TheStealthWarrior"
 
-const toCamelCase = str => str.replace(/[-_](.)/g, (match, char) => char.toUpperCase());
+
+// const toCamelCase = str => str.replace(/[-_](.)/g, (match, char) => char.toUpperCase());
+
+//Alternate solution
+function toCamelCase(str){
+ return str.split(/-|_/).map((e, i) => i == 0 ? e : e[0].toUpperCase() + e.slice(1)).join('');
+}
