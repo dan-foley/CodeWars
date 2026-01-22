@@ -5,10 +5,15 @@
 // * 'abc' =>  ['ab', 'c_']
 // * 'abcdef' => ['ab', 'cd', 'ef']
 
-// function solution(str){
-//   if (str.length % 2 !== 0) str += '_';
-//   return str.match(/.{2}/g) || [];
+// const solution = str => (str + '_').match(/.{2}/g) || [];
 
-// }
+// Solution without confusing regex:
 
-const solution = str => (str + '_').match(/.{2}/g) || [];
+function solution(str){
+  let result = [];
+  if (str.length % 2 !== 0) str += '_';
+  for (let i = 0; i < str.length; i += 2){
+    result.push(str[i] + (str[i + 1]))
+  }
+  return result;
+}
