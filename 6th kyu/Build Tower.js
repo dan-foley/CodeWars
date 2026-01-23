@@ -18,14 +18,18 @@
 //   "***********"
 // ]
 
-function towerBuilder(nFloors) {
-  let tower = [];
+// function towerBuilder(nFloors) {
+//   let tower = [];
   
-  for (let i = 1; i <= nFloors; i++){
-    let spaces = ' '.repeat(nFloors - i);
-    let stars = '*'.repeat(2 * i - 1);
-    tower.push(`${spaces}${stars}${spaces}`)
-  }
+//   for (let i = 1; i <= nFloors; i++){
+//     let spaces = ' '.repeat(nFloors - i);
+//     let stars = '*'.repeat(2 * i - 1);
+//     tower.push(`${spaces}${stars}${spaces}`)
+//   }
   
-  return tower;
+//   return tower;
+// }
+
+function towerBuilder(n) {
+  return Array(n).fill().map((_,i)=>' '.repeat(n-1-i)+'*'.repeat(2*i+1)+' '.repeat(n-1-i));
 }
