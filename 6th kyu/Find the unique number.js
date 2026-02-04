@@ -6,7 +6,9 @@
 
 // The tests contain some very huge arrays, so think about performance.
 
-function findUniq(arr) {
-  let sorted = arr.sort((a,b)=>a-b);
-  return sorted[0] === sorted[1] ? sorted[sorted.length-1] : sorted[0];
-}
+// function findUniq(arr) {
+//   let sorted = arr.sort((a,b)=>a-b);
+//   return sorted[0] === sorted[1] ? sorted[sorted.length-1] : sorted[0];
+// }
+
+const findUniq = arr => arr.find(num => arr.indexOf(num) === arr.lastIndexOf(num));
