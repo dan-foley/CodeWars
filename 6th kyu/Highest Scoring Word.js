@@ -10,8 +10,14 @@
 
 // All letters will be lowercase and all inputs will be valid.
 
+// function high(x){
+//   return x.split(' ')
+//           .map(word => [word, word.split('').reduce((sum, c) => sum += c.charCodeAt(0) - 96, 0)])
+//           .sort((a, b) => b[1] - a[1])[0][0];
+// };
+
+//Much more efficient solution
 function high(x){
-  return x.split(' ')
-          .map(word => [word, word.split('').reduce((sum, c) => sum += c.charCodeAt(0) - 96, 0)])
-          .sort((a, b) => b[1] - a[1])[0][0];
-};
+  const getScore = word => word.split('').reduce((s,c) => s += c.charCodeAt(0)-96, 0);
+  return x.split(' ').reduce((highest, current) => getScore(current) > getScore(highest) ? current : highest);
+}
