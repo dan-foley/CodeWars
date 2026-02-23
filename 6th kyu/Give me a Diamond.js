@@ -40,3 +40,5 @@ function diamond(n){
   
   return diamond;
 }
+
+// (n - i) / 2 takes the total width of the diamond n, subtracts the number of stars on the current row i to find the extra space, and divides by 2 to put that many spaces on the left so the stars are centered.
