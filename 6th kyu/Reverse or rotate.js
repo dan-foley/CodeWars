@@ -19,21 +19,42 @@
 // Example of a string rotated to the left by one position:
 // s = "123456" gives "234561".
 
-function revrot(str, sz) {
-  if (sz <= 0 || sz > str.length) return '';
+// function revrot(str, sz) {
+//   if (sz <= 0 || sz > str.length) return '';
   
-  let result = '';
+//   let result = '';
   
-  for (let i = 0; i <= str.length - sz; i += sz){
+//   for (let i = 0; i <= str.length - sz; i += sz){
+//     let chunk = str.slice(i, i + sz);
+    
+//     let sum = 0;
+//     for (let digit of chunk) sum += Number(digit);
+    
+//     result += sum % 2 === 0 
+//       ? chunk.split('').reverse().join('')
+//       : chunk.slice(1) + chunk[0];
+//   }
+  
+//   return result;
+
+// }
+
+function revrot(str, sz) {  
+  if (sz <= 0 || sz > str.length) return ''; 
+  let chunks = [];
+  
+  for (let i = 0; i <= str.length - sz; i += sz){   
     let chunk = str.slice(i, i + sz);
-    
     let sum = 0;
-    for (let digit of chunk) sum += Number(digit);
     
-    result += sum % 2 === 0 
-      ? chunk.split('').reverse().join('')
-      : chunk.slice(1) + chunk[0];
+    for (let digit of chunk) sum += digit.charCodeAt(0) - 48;
+    
+    sum % 2 === 0
+      ? chunks.push(chunk.split('').reverse().join(''))
+      : chunks.push(chunk.slice(1) + chunk[0])
   }
   
-  return result;
+  return chunks.join('');
 }
+
+// Second version is more efficient because using an array with .join('') avoids the performance bottleneck of repeated string reallocation caused by JavaScript's string immutability."
