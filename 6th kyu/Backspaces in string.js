@@ -9,13 +9,9 @@
 // ""              ==>  ""
 
 function cleanString(s) {
-  const result = [];
+  let result = [];
   for (let char of s){
-    if (char === '#') {
-      result.pop();
-    } else {
-      result.push(char);
-    }
+    char === '#' ? result.pop() : result.push(char);
   }
   return result.join('');
 }
