@@ -23,10 +23,6 @@
 //   return string.replace(/[12345]/g, c => map[c])
 // }
 
-function encode(string) {
-  return string.replace(/[aeiou]/g, x => '_aeiou'.indexOf(x));
-};
+const encode = str => str.replace(/[aeiou]/g, c => '_aeiou'.indexOf(c));
 
-function decode(string) {
-  return string.replace(/[12345]/g, x => '_aeiou'.charAt(x));
-};
+const decode = str => str.replace(/[12345]/g, c => '_aeiou'.charAt(c));
