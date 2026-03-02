@@ -17,7 +17,7 @@
 // 5 "!4897 Oj oSpC"
 
 function playPass(s, n) {
-    let result = '';
+  let result = '';
   
   for (let i = 0; i < s.length; i++){
     let char = s[i];
@@ -34,3 +34,11 @@ function playPass(s, n) {
   
   return result;
 }
+
+// function playPass(s, n) {
+//   return s
+//     .replace(/[A-Z]/g, char => String.fromCharCode(((char.charCodeAt(0) - 65 + n) % 26) + 65))
+//     .replace(/\d/g, digit => 9 - digit)
+//     .replace(/(.)(.?)/g, (_, even, odd) => even.toUpperCase() + odd.toLowerCase())
+//     .split('').reverse().join('')
+// } 
