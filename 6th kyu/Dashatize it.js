@@ -23,3 +23,5 @@ function dashatize(num) {
   
   return result;
 }
+
+// const dashatize = num => num.toString().match(/[13579]|[02468]+/g).join('-');
