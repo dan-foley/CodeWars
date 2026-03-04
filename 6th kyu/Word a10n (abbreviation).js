@@ -16,11 +16,17 @@
 //                      "-"      " "    " "     " "     "!"
 // output: "e6t-r3s are r4y fun!"
 
+// function abbreviate(string) {
+//   return string.replace(/[a-zA-Z]{4,}/g, word => {
+//     const first = word[0];
+//     const middle = word.length - 2;
+//     const last = word[word.length-1];
+//     return first + middle + last;
+//   });
+// }
+
 function abbreviate(string) {
-  return string.replace(/[a-zA-Z]{4,}/g, word => {
-    const first = word[0];
-    const middle = word.length - 2;
-    const last = word[word.length-1];
-    return first + middle + last;
-  });
+  const pattern = /[a-z]{4,}/gi;
+  const transform = word => word[0] + (word.length-2) + word[word.length-1];
+  return string.replace(pattern, transform);
 }
